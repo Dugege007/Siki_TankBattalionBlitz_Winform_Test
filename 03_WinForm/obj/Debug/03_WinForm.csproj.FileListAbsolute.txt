@@ -1,0 +1,9 @@
+D:\Du_Code\20220105_TankBattalionBlitz\03_WinForm\bin\Debug\03_WinForm.exe.config
+D:\Du_Code\20220105_TankBattalionBlitz\03_WinForm\bin\Debug\03_WinForm.exe
+D:\Du_Code\20220105_TankBattalionBlitz\03_WinForm\bin\Debug\03_WinForm.pdb
+D:\Du_Code\20220105_TankBattalionBlitz\03_WinForm\obj\Debug\_03_WinForm.Properties.Resources.resources
+D:\Du_Code\20220105_TankBattalionBlitz\03_WinForm\obj\Debug\03_WinForm.csproj.GenerateResource.cache
+D:\Du_Code\20220105_TankBattalionBlitz\03_WinForm\obj\Debug\03_WinForm.csproj.CoreCompileInputs.cache
+D:\Du_Code\20220105_TankBattalionBlitz\03_WinForm\obj\Debug\03_WinForm.exe
+D:\Du_Code\20220105_TankBattalionBlitz\03_WinForm\obj\Debug\03_WinForm.pdb
+D:\Du_Code\20220105_TankBattalionBlitz\03_WinForm\obj\Debug\_03_WinForm.Form1.resources

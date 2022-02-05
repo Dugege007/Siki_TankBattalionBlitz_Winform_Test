@@ -1,0 +1,9 @@
+D:\Du_Code\20220105_TankBattalionBlitz\05_坦克大战\bin\Debug\05_坦克大战.exe.config
+D:\Du_Code\20220105_TankBattalionBlitz\05_坦克大战\bin\Debug\05_坦克大战.exe
+D:\Du_Code\20220105_TankBattalionBlitz\05_坦克大战\bin\Debug\05_坦克大战.pdb
+D:\Du_Code\20220105_TankBattalionBlitz\05_坦克大战\obj\Debug\_05_坦克大战.Form1.resources
+D:\Du_Code\20220105_TankBattalionBlitz\05_坦克大战\obj\Debug\_05_坦克大战.Properties.Resources.resources
+D:\Du_Code\20220105_TankBattalionBlitz\05_坦克大战\obj\Debug\05_坦克大战.csproj.GenerateResource.cache
+D:\Du_Code\20220105_TankBattalionBlitz\05_坦克大战\obj\Debug\05_坦克大战.csproj.CoreCompileInputs.cache
+D:\Du_Code\20220105_TankBattalionBlitz\05_坦克大战\obj\Debug\05_坦克大战.exe
+D:\Du_Code\20220105_TankBattalionBlitz\05_坦克大战\obj\Debug\05_坦克大战.pdb
