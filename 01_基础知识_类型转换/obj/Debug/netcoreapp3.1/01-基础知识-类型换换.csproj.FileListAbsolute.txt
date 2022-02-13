@@ -1,0 +1,13 @@
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\bin\Debug\netcoreapp3.1\01-基础知识-类型换换.exe
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\bin\Debug\netcoreapp3.1\01-基础知识-类型换换.deps.json
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\bin\Debug\netcoreapp3.1\01-基础知识-类型换换.runtimeconfig.json
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\bin\Debug\netcoreapp3.1\01-基础知识-类型换换.runtimeconfig.dev.json
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\bin\Debug\netcoreapp3.1\01-基础知识-类型换换.dll
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\bin\Debug\netcoreapp3.1\01-基础知识-类型换换.pdb
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\obj\Debug\netcoreapp3.1\01-基础知识-类型换换.csproj.AssemblyReference.cache
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\obj\Debug\netcoreapp3.1\01-基础知识-类型换换.AssemblyInfoInputs.cache
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\obj\Debug\netcoreapp3.1\01-基础知识-类型换换.AssemblyInfo.cs
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\obj\Debug\netcoreapp3.1\01-基础知识-类型换换.csproj.CoreCompileInputs.cache
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\obj\Debug\netcoreapp3.1\01-基础知识-类型换换.dll
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\obj\Debug\netcoreapp3.1\01-基础知识-类型换换.pdb
+C:\Users\souke\source\repos\第三季-坦克大战\01-基础知识-类型换换\obj\Debug\netcoreapp3.1\01-基础知识-类型换换.genruntimeconfig.cache

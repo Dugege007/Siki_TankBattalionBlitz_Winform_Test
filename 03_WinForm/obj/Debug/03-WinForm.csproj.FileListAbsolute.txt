@@ -1,0 +1,10 @@
+C:\Users\souke\source\repos\第三季-坦克大战\03-WinForm\bin\Debug\03-WinForm.exe.config
+C:\Users\souke\source\repos\第三季-坦克大战\03-WinForm\bin\Debug\03-WinForm.exe
+C:\Users\souke\source\repos\第三季-坦克大战\03-WinForm\bin\Debug\03-WinForm.pdb
+C:\Users\souke\source\repos\第三季-坦克大战\03-WinForm\obj\Debug\03-WinForm.csproj.AssemblyReference.cache
+C:\Users\souke\source\repos\第三季-坦克大战\03-WinForm\obj\Debug\_03_WinForm.Form1.resources
+C:\Users\souke\source\repos\第三季-坦克大战\03-WinForm\obj\Debug\_03_WinForm.Properties.Resources.resources
+C:\Users\souke\source\repos\第三季-坦克大战\03-WinForm\obj\Debug\03-WinForm.csproj.GenerateResource.cache
+C:\Users\souke\source\repos\第三季-坦克大战\03-WinForm\obj\Debug\03-WinForm.csproj.CoreCompileInputs.cache
+C:\Users\souke\source\repos\第三季-坦克大战\03-WinForm\obj\Debug\03-WinForm.exe
+C:\Users\souke\source\repos\第三季-坦克大战\03-WinForm\obj\Debug\03-WinForm.pdb

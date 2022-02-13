@@ -1,0 +1,13 @@
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\bin\Debug\netcoreapp3.1\02-多线程.exe
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\bin\Debug\netcoreapp3.1\02-多线程.deps.json
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\bin\Debug\netcoreapp3.1\02-多线程.runtimeconfig.json
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\bin\Debug\netcoreapp3.1\02-多线程.runtimeconfig.dev.json
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\bin\Debug\netcoreapp3.1\02-多线程.dll
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\bin\Debug\netcoreapp3.1\02-多线程.pdb
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\obj\Debug\netcoreapp3.1\02-多线程.csproj.AssemblyReference.cache
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\obj\Debug\netcoreapp3.1\02-多线程.AssemblyInfoInputs.cache
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\obj\Debug\netcoreapp3.1\02-多线程.AssemblyInfo.cs
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\obj\Debug\netcoreapp3.1\02-多线程.csproj.CoreCompileInputs.cache
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\obj\Debug\netcoreapp3.1\02-多线程.dll
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\obj\Debug\netcoreapp3.1\02-多线程.pdb
+C:\Users\souke\source\repos\第三季-坦克大战\02-多线程\obj\Debug\netcoreapp3.1\02-多线程.genruntimeconfig.cache

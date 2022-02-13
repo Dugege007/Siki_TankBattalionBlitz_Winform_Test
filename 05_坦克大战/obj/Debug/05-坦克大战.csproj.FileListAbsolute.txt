@@ -1,0 +1,10 @@
+C:\Users\souke\source\repos\第三季-坦克大战\05-坦克大战\bin\Debug\05-坦克大战.exe.config
+C:\Users\souke\source\repos\第三季-坦克大战\05-坦克大战\bin\Debug\05-坦克大战.exe
+C:\Users\souke\source\repos\第三季-坦克大战\05-坦克大战\bin\Debug\05-坦克大战.pdb
+C:\Users\souke\source\repos\第三季-坦克大战\05-坦克大战\obj\Debug\_05_坦克大战.Properties.Resources.resources
+C:\Users\souke\source\repos\第三季-坦克大战\05-坦克大战\obj\Debug\05-坦克大战.csproj.GenerateResource.cache
+C:\Users\souke\source\repos\第三季-坦克大战\05-坦克大战\obj\Debug\05-坦克大战.csproj.CoreCompileInputs.cache
+C:\Users\souke\source\repos\第三季-坦克大战\05-坦克大战\obj\Debug\05-坦克大战.exe
+C:\Users\souke\source\repos\第三季-坦克大战\05-坦克大战\obj\Debug\05-坦克大战.pdb
+C:\Users\souke\source\repos\第三季-坦克大战\05-坦克大战\obj\Debug\05-坦克大战.csproj.AssemblyReference.cache
+C:\Users\souke\source\repos\第三季-坦克大战\05-坦克大战\obj\Debug\_05_坦克大战.Form1.resources
