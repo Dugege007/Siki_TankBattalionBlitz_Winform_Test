@@ -8,24 +8,26 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\souke\\.nuget\\packages\\": {}
+    "C:\\Users\\win10\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\souke\\source\\repos\\第三季-坦克大战\\01-基础知识-类型换换\\01-基础知识-类型换换.csproj",
-      "projectName": "01-基础知识-类型换换",
-      "projectPath": "C:\\Users\\souke\\source\\repos\\第三季-坦克大战\\01-基础知识-类型换换\\01-基础知识-类型换换.csproj",
-      "packagesPath": "C:\\Users\\souke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\souke\\source\\repos\\第三季-坦克大战\\01-基础知识-类型换换\\obj\\",
+      "projectUniqueName": "D:\\Du_Code\\20220105_TankBattalionBlitz\\01_基础知识_类型转换\\01_基础知识_类型转换.csproj",
+      "projectName": "01_基础知识_类型转换",
+      "projectPath": "D:\\Du_Code\\20220105_TankBattalionBlitz\\01_基础知识_类型转换\\01_基础知识_类型转换.csproj",
+      "packagesPath": "C:\\Users\\win10\\.nuget\\packages\\",
+      "outputPath": "D:\\Du_Code\\20220105_TankBattalionBlitz\\01_基础知识_类型转换\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\souke\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\win10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -58,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
