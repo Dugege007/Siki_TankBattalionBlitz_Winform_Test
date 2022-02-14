@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2DAB8D79-095F-403A-85BD-2783451B44D9}</ProjectGuid>
+    <ProjectGuid>{F50081DB-9854-48F5-B424-A2B095C82BA2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>_05_坦克大战</RootNamespace>
-    <AssemblyName>05-坦克大战</AssemblyName>
+    <AssemblyName>05_坦克大战</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

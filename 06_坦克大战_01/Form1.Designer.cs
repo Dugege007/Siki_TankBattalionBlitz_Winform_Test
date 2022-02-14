@@ -1,5 +1,5 @@
 ﻿
-namespace _06_坦克大战_正式
+namespace _06_坦克大战_01
 {
     partial class Form1
     {
@@ -38,11 +38,10 @@ namespace _06_坦克大战_正式
             this.ClientSize = new System.Drawing.Size(450, 450);
             this.Name = "Form1";
             this.Text = "坦克大战";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
-
         }
 
         #endregion

@@ -5,32 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using _06_坦克大战_正式.Properties;
+using _06_坦克大战_01.Properties;
 
-namespace _06_坦克大战_正式
+namespace _06_坦克大战_01
 {
-    class MyTank:Movething
+    class MyTank : Movable
     {
-
+        //可否移动
         public bool IsMoving { get; set; }
-        public int HP { get; set; }
-        private int originalX;
-        private int originalY;
-        //
-        public MyTank(int x,int y,int speed)
+
+        public MyTank(int x, int y, int speed)
         {
             IsMoving = false;
+
             this.X = x;
             this.Y = y;
-            originalX = x;
-            originalY = y;
             this.Speed = speed;
-            BitmapDown = Resources.MyTankDown;
-            BitmapUp = Resources.MyTankUp;
-            BitmapRight = Resources.MyTankRight;
-            BitmapLeft = Resources.MyTankLeft;
+            BmpUp = Resources.MyTankUp;
+            BmpDown = Resources.MyTankDown;
+            BmpLeft = Resources.MyTankLeft;
+            BmpRight = Resources.MyTankRight;
             this.Dir = Direction.Up;
-            HP = 4;
         }
 
         public override void Update()
@@ -43,43 +38,59 @@ namespace _06_坦克大战_正式
 
         private void MoveCheck()
         {
-
-            #region 检查有没有超过窗体边界
+            #region 检查有没有超出窗体边界
             if (Dir == Direction.Up)
             {
                 if (Y - Speed < 0)
                 {
-                    IsMoving = false; return;
+                    IsMoving = false;
+                    return;
                 }
             }
             else if (Dir == Direction.Down)
             {
-                if (Y + Speed + Height > 450)
+                if (Y + Speed > 450 - Height)
                 {
-                    IsMoving = false; return;
+                    IsMoving = false;
+                    return;
                 }
             }
             else if (Dir == Direction.Left)
             {
                 if (X - Speed < 0)
                 {
-                    IsMoving = false; return;
+                    IsMoving = false;
+                    return;
                 }
             }
             else if (Dir == Direction.Right)
             {
-                if (X + Speed + Width > 450)
+                if (X + Speed > 450 - Width)
                 {
-                    IsMoving = false; return;
+                    IsMoving = false;
+                    return;
                 }
             }
+            //if (Dir == Direction.Up || Dir == Direction.Down)
+            //{
+            //    if (Y - Speed < 0 || Y + Speed > 450 - Height)
+            //    {
+            //        IsMoving = false;
+            //        return;
+            //    }
+            //}
+            //else if (Dir == Direction.Left || Dir == Direction.Right) 
+            //{
+            //    if (X - Speed < 0 || X + Speed > 450 - Width) 
+            //    {
+            //        IsMoving = false;
+            //        return;
+            //    }
+            //}
             #endregion
 
-
-            //检查有没有和其他元素发生碰撞
-
+            #region 有没有和其他游戏元素发生碰撞
             Rectangle rect = GetRectangle();
-
             switch (Dir)
             {
                 case Direction.Up:
@@ -98,22 +109,30 @@ namespace _06_坦克大战_正式
 
             if (GameObjectManager.IsCollidedWall(rect) != null)
             {
-                IsMoving = false; return;
+                IsMoving = false;
+                return;
             }
+
             if (GameObjectManager.IsCollidedSteel(rect) != null)
             {
-                IsMoving = false; return;
+                IsMoving = false;
+                return;
             }
+
             if (GameObjectManager.IsCollidedBoss(rect))
             {
-                IsMoving = false; return;
+                IsMoving = false;
+                return;
             }
+            #endregion
         }
 
         private void Move()
         {
-            if (IsMoving == false) return;
-
+            if (IsMoving == false)
+            {
+                return;
+            }
             switch (Dir)
             {
                 case Direction.Up:
@@ -130,26 +149,37 @@ namespace _06_坦克大战_正式
                     break;
             }
         }
-        // GameMainThread  KeyDown
-        // 1 2 
+
         public void KeyDown(KeyEventArgs args)
         {
             switch (args.KeyCode)
             {
                 case Keys.W:
-                    Dir = Direction.Up;
+                    if (Dir!=Direction.Up)
+                    {
+                        Dir = Direction.Up;
+                    }
                     IsMoving = true;
                     break;
                 case Keys.S:
-                    Dir = Direction.Down;
+                    if (Dir != Direction.Down)
+                    {
+                        Dir = Direction.Down;
+                    }
                     IsMoving = true;
                     break;
                 case Keys.A:
-                    Dir = Direction.Left;
+                    if (Dir != Direction.Left)
+                    {
+                        Dir = Direction.Left;
+                    }
                     IsMoving = true;
                     break;
                 case Keys.D:
-                    Dir = Direction.Right;
+                    if (Dir != Direction.Right)
+                    {
+                        Dir = Direction.Right;
+                    }
                     IsMoving = true;
                     break;
                 case Keys.Space:
@@ -157,61 +187,60 @@ namespace _06_坦克大战_正式
                     break;
             }
         }
+
         private void Attack()
         {
-            SoundMananger.PlayFire();
             //发射子弹
+            //偏移量
+            int p = 1;
+
+            //子弹生成位置
             int x = this.X;
             int y = this.Y;
+
+            //int x = this.X + (Width / 2);
+            //int y = this.Y + (Height / 2);
 
             switch (Dir)
             {
                 case Direction.Up:
-                    x = x + Width / 2;
+                    x += p;
+                    y = y - Height / 2;
                     break;
                 case Direction.Down:
-                    x = x + Width / 2;
-                    y += Height;
+                    x += p;
+                    y = y + Height / 2 + p;
                     break;
                 case Direction.Left:
-                    y = y + Height / 2;
+                    x = x - Width / 2 + p;
+                    y += p + p;
                     break;
                 case Direction.Right:
-                    x += Width;
-                    y = y + Height / 2;
+                    x = x + Width / 2 + p;
+                    y += p;
                     break;
             }
-
-
-            GameObjectManager.CreateBullet(x,y,Tag.MyTank,Dir);
+            GameObjectManager.CreateBullet(x, y, Dir, Tag.MyTank);
         }
+
         public void KeyUp(KeyEventArgs args)
         {
+            IsMoving = false;
+
             switch (args.KeyCode)
             {
                 case Keys.W:
-                    IsMoving = false;
+                    Dir = Direction.Up;
                     break;
                 case Keys.S:
-                    IsMoving = false;
+                    Dir = Direction.Down;
                     break;
                 case Keys.A:
-                    IsMoving = false;
+                    Dir = Direction.Left;
                     break;
                 case Keys.D:
-                    IsMoving = false;
+                    Dir = Direction.Right;
                     break;
-            }
-        }
-        public void TakeDamage()
-        {
-            HP--;
-
-            if (HP <= 0)
-            {
-                X = originalX;
-                Y = originalY;
-                HP = 4;
             }
         }
     }

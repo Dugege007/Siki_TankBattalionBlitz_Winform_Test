@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{02DE41EE-D087-4434-A154-D0C59EC7FC90}</ProjectGuid>
+    <ProjectGuid>{918C83A9-8A1D-44FF-B37E-BB358F95BB7C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_04_手动创建Winform窗体</RootNamespace>
-    <AssemblyName>04-手动创建Winform窗体</AssemblyName>
+    <RootNamespace>_04_手动创建WinForm窗体</RootNamespace>
+    <AssemblyName>04_手动创建WinForm窗体</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

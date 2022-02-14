@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,45 +14,47 @@ namespace _05_坦克大战
     {
         public Form1()
         {
-
             InitializeComponent();
 
-            this.StartPosition = FormStartPosition.CenterScreen;
-            //this.StartPosition = FormStartPosition.Manual;
-            //this.Location = new Point(3000,500);
+            //生成窗体的位置
+            //this.StartPosition = FormStartPosition.CenterScreen;    //将窗体生成在屏幕中间
+            this.StartPosition = FormStartPosition.Manual;  //手动指定生成位置
+            this.Location = new Point(300, 300);
 
-            //GDI Graphics Device Interface
-
-            
         }
 
-        //
+        //Paint事件可以在窗体中绘制
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            //GDI Graphics Device Interface
+            //使用GDI在窗体中绘制图像
             Graphics g = this.CreateGraphics();
 
-            #region 怎么绘制线和字符串
-            // RGB red green blue
+            #region 使用GDI绘图 绘制线和字符串
+            //Color c = Color.FromArgb(50, 50, 50, 50);
+            //Pen p1 = new Pen(Color.Black);
+            //g.DrawLine(p1, new Point(0, 0), new Point(100, 100));
 
-            //Pen p = new Pen(Color.Black);
-
-            //g.DrawLine(p, new Point(50, 50), new Point(100, 100));
-
-            //g.DrawString("www.sikiedu.com - SiKi学院", 
-            //    new Font("隶书", 20), 
-            //    new SolidBrush(Color.Red), 
+            //g.DrawString(
+            //    "Dugege杜哥哥", 
+            //    new Font("宋体", 20), 
+            //    new SolidBrush(Color.Blue), 
             //    new Point(100, 100));
             #endregion
 
-            Image image = Properties.Resources.Boss;
+            //可以使用Image在窗体中绘制图片
+            Image imageBoss = Properties.Resources.Boss;
+            //生成图片
+            g.DrawImage(imageBoss, new Point(200, 200));
 
-            Bitmap bm = Properties.Resources.Star1;
-            bm.MakeTransparent(Color.Black);
+            //也可以使用Bitmap位图在窗体中绘制图片
+            Bitmap bmBoss = Properties.Resources.Star1;
+            //使用位图绘制的图片可以编辑
+            //比如让图片中的某个颜色变透明
+            bmBoss.MakeTransparent(Color.Black);
+            //生成图片
+            g.DrawImage(bmBoss, 150, 150);
 
-            g.DrawImage(bm, 150, 150);
-
-
-            g.DrawImage(image, 200, 200);
         }
     }
 }

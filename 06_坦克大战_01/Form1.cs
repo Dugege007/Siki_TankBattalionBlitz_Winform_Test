@@ -9,25 +9,25 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _06_坦克大战_正式
+namespace _06_坦克大战_01
 {
     public partial class Form1 : Form
     {
         private Thread t;
-        private static Graphics windowG;
-
+        private static Graphics formG;
+        //临时画布
         private static Bitmap tempBmp;
 
         public Form1()
         {
             InitializeComponent();
+
+            //打开后在屏幕居中
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            //阻塞
+            formG = this.CreateGraphics();
 
-            windowG = this.CreateGraphics();
-
-
+            //将背景和图像先绘制到临时画布上，然后再将临时画布绘制到窗体中，可以避免闪烁
             tempBmp = new Bitmap(450, 450);
             Graphics bmpG = Graphics.FromImage(tempBmp);
             GameFramework.g = bmpG;
@@ -38,28 +38,25 @@ namespace _06_坦克大战_正式
 
         private static void GameMainThread()
         {
-
-            //GameFramework
+            //GameFramework 游戏框架
 
             GameFramework.Start();
 
-            int sleepTime = 1000 / 60;
+            int sleepTime = 1000 / 120;
 
-            //60
             while (true)
             {
                 GameFramework.g.Clear(Color.Black);
+                GameFramework.Update();
 
-                GameFramework.Update();// 60
-
-                windowG.DrawImage(tempBmp, 0, 0);
-
+                //绘制临时画布
+                formG.DrawImage(tempBmp, 0, 0);
                 Thread.Sleep(sleepTime);
             }
 
         }
 
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             t.Abort();
         }
@@ -73,6 +70,7 @@ namespace _06_坦克大战_正式
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             GameObjectManager.KeyUp(e);
+
         }
     }
 }

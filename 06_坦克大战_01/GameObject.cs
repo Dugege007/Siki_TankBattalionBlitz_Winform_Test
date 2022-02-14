@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _06_坦克大战_正式
+namespace _06_坦克大战_01
 {
     abstract class GameObject
     {
+        //坐标，以像素为单位
         public int X { get; set; }
         public int Y { get; set; }
 
@@ -20,18 +21,18 @@ namespace _06_坦克大战_正式
         public virtual void DrawSelf()
         {
             Graphics g = GameFramework.g;
-
-            g.DrawImage(GetImage(),X,Y);
+            g.DrawImage(GetImage(), X, Y);
         }
+
         public virtual void Update()
         {
             DrawSelf();
         }
+
         public Rectangle GetRectangle()
         {
             Rectangle rectangle = new Rectangle(X, Y, Width, Height);
             return rectangle;
         }
-
     }
 }

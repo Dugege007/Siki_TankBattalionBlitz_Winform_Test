@@ -1,44 +1,38 @@
-﻿using System;
+﻿using _06_坦克大战_01.Properties;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using _06_坦克大战_正式.Properties;
 
-namespace _06_坦克大战_正式
+namespace _06_坦克大战_01
 {
     enum Tag
     {
         MyTank,
         EnemyTank
     }
-    class Bullet:Movething
+
+    class Bullet : Movable
     {
         public Tag Tag { get; set; }
 
+        //判断是否需要销毁的参数
         public bool IsDestroy { get; set; }
 
-        public Bullet(int x, int y, int speed,Direction dir,Tag tag)
+        public Bullet(int x, int y, int speed, Direction dir, Tag tag)
         {
             IsDestroy = false;
-            this.X = x;
-            this.Y = y;
+            this.X = x + Width / 2;
+            this.Y = y + Height / 2;
             this.Speed = speed;
-            BitmapDown = Resources.BulletDown;
-            BitmapUp = Resources.BulletUp;
-            BitmapRight = Resources.BulletRight;
-            BitmapLeft = Resources.BulletLeft;
+            BmpUp = Resources.BulletUp;
+            BmpDown = Resources.BulletDown;
+            BmpLeft = Resources.BulletLeft;
+            BmpRight = Resources.BulletRight;
             this.Dir = dir;
             this.Tag = tag;
-
-            this.X -= Width / 2;
-            this.Y -= Height / 2;
-        }
-
-        public override void DrawSelf()
-        {
-            base.DrawSelf();
         }
 
         public override void Update()
@@ -51,105 +45,92 @@ namespace _06_坦克大战_正式
 
         private void MoveCheck()
         {
-
-            #region 检查有没有超过窗体边界
+            #region 检查有没有超出窗体边界
             if (Dir == Direction.Up)
             {
-                if (Y +Height/2+3 < 0)
+                if (Y + Height < 0)
                 {
-                    IsDestroy = true ; return;
+                    IsDestroy = true;
+                    return;
                 }
             }
             else if (Dir == Direction.Down)
             {
-                if (Y + Height / 2 -3 > 450)
+                if (Y > 450)
                 {
-                    IsDestroy=true; return;
+                    IsDestroy = true;
+                    return;
                 }
             }
             else if (Dir == Direction.Left)
             {
-                if (X +Width/2-3 < 0)
+                if (X + Width < 0)
                 {
-                    IsDestroy = true; return;
+                    IsDestroy = true;
+                    return;
                 }
             }
             else if (Dir == Direction.Right)
             {
-                if (X+Width/2+3 > 450)
+                if (X > 450)
                 {
-                    IsDestroy = true; return;
+                    IsDestroy = true;
+                    return;
                 }
             }
             #endregion
 
-
-            //检查有没有和其他元素发生碰撞
-
+            #region 有没有和其他游戏元素发生碰撞
             Rectangle rect = GetRectangle();
 
+            //子弹碰撞边界偏移量
             rect.X = X + Width / 2 - 3;
             rect.Y = Y + Height / 2 - 3;
-            rect.Height = 3;
-            rect.Width = 3;
+            rect.Width = 5;
+            rect.Height = 5;
 
-            //1、墙 2、钢墙 3、坦克
+            //爆炸的中心位置
             int xExplosion = this.X + Width / 2;
             int yExplosion = this.Y + Height / 2;
 
-            NotMovething wall = null;
-            if ( (wall=GameObjectManager.IsCollidedWall(rect)) != null)
+            EnemyTank tank = null;
+            if (Tag==Tag.MyTank)
             {
-                IsDestroy=true;
+                if ((tank = GameObjectManager.IsCollidedEnemyTank(rect)) != null)
+                {
+                    IsDestroy = true;
+                    GameObjectManager.DestroyEnemyTank(tank);
+                    GameObjectManager.CreateExplosion(xExplosion, yExplosion);
+                    return;
+                }
+            }
+
+            Immovable wall = null;
+            if ((wall = GameObjectManager.IsCollidedWall(rect)) != null)
+            {
+                IsDestroy = true;
                 GameObjectManager.DestroyWall(wall);
                 GameObjectManager.CreateExplosion(xExplosion, yExplosion);
-                SoundMananger.PlayBlast();
                 return;
             }
-            if (GameObjectManager.IsCollidedSteel(rect) != null)
-            {
-                GameObjectManager.CreateExplosion(xExplosion, yExplosion);
 
-                IsDestroy = true; return;
+            if ((wall = GameObjectManager.IsCollidedSteel(rect)) != null)
+            {
+                IsDestroy = true;
+                GameObjectManager.CreateExplosion(xExplosion, yExplosion);
+                return;
             }
+
             if (GameObjectManager.IsCollidedBoss(rect))
             {
-                SoundMananger.PlayBlast();
-                GameFramework.ChangeToGameOver(); return;
+                IsDestroy = true;
+                return;
             }
-
-            if (Tag == Tag.MyTank)
-            {
-                EnemyTank tank = null;
-                if ( (tank = GameObjectManager.IsCollidedEnemyTank(rect)) != null)
-                {
-                    IsDestroy = true;
-                    GameObjectManager.DestroyTank(tank);
-                    GameObjectManager.CreateExplosion(xExplosion, yExplosion);
-                    SoundMananger.PlayHit();
-                    return;
-                }
-            }else if(Tag== Tag.EnemyTank)
-            {
-                MyTank mytank = null;
-                if( (mytank = GameObjectManager.IsCollidedMyTank(rect)) != null)
-                {
-                    IsDestroy = true;
-                    GameObjectManager.CreateExplosion(xExplosion, yExplosion);
-                    SoundMananger.PlayBlast();
-                    mytank.TakeDamage();
-
-                    return;
-                }
-            } 
+            #endregion
         }
-
-        private void ChangeDirection() { }
 
         private void Move()
         {
-
-
             switch (Dir)
             {
                 case Direction.Up:

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace _06_坦克大战_正式.Properties
+namespace _06_坦克大战_01.Properties
 {
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]

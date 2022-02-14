@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace _04_手动创建Winform窗体.Properties
+namespace _04_手动创建WinForm窗体.Properties
 {
     /// <summary>
     ///   强类型资源类，用于查找本地化字符串等。
@@ -43,7 +43,7 @@ namespace _04_手动创建Winform窗体.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("_04_手动创建Winform窗体.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("_04_手动创建WinForm窗体.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

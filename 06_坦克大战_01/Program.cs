@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _06_坦克大战_正式
+namespace _06_坦克大战_01
 {
     static class Program
     {
