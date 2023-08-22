@@ -8,3 +8,14 @@ D:\Du_Code\20220105_TankBattalionBlitz\06_坦克大战_01\obj\Debug\06_坦克大
 D:\Du_Code\20220105_TankBattalionBlitz\06_坦克大战_01\obj\Debug\06_坦克大战_01.exe
 D:\Du_Code\20220105_TankBattalionBlitz\06_坦克大战_01\obj\Debug\06_坦克大战_01.pdb
 D:\Du_Code\20220105_TankBattalionBlitz\06_坦克大战_01\obj\Debug\_06_坦克大战_01.Form1.resources
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\bin\Debug\06_坦克大战_01.exe.config
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\bin\Debug\06_坦克大战_01.exe
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\bin\Debug\06_坦克大战_01.pdb
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\obj\Debug\06_坦克大战_01.csproj.AssemblyReference.cache
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\obj\Debug\06_坦克大战_01.csproj.SuggestedBindingRedirects.cache
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\obj\Debug\_06_坦克大战_01.Form1.resources
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\obj\Debug\_06_坦克大战_01.Properties.Resources.resources
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\obj\Debug\06_坦克大战_01.csproj.GenerateResource.cache
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\obj\Debug\06_坦克大战_01.csproj.CoreCompileInputs.cache
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\obj\Debug\06_坦克大战_01.exe
+D:\Du_Unity3D_Project\SiKi\20220214_TankBattalionBlitz\06_坦克大战_01\obj\Debug\06_坦克大战_01.pdb
